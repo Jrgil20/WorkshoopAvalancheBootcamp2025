@@ -8,7 +8,7 @@ contract EnvioDeProductos {
         Variable para almacenar el estado actual
         ¿Como hacemos para almacenar el estado actual usando un enum como tipo de dato?
     */
-    ??? public status;
+    EstadoEnvio public status;
 
     // Función para cambiar el estado de la tarea
     function setStatus(EstadoEnvio newStatus) public {
@@ -20,7 +20,7 @@ contract EnvioDeProductos {
         ¿Cómo le asignamos el estado Cancelado a la variable de estado?
     */
     function cancelar() public {
-        status = ???.Cancelado;
+        status = EstadoEnvio.Cancelado;
     }
 
     /* 
@@ -28,7 +28,7 @@ contract EnvioDeProductos {
         ¿Que tipo de dato debe retornar para que nos indique el estado?
         ¿Que variable retorna?
     */
-    function getStatus() public view returns (???) {
-        return ???;
+    function getStatus() public view returns (EstadoEnvio) {
+        return status;
     }
 }
